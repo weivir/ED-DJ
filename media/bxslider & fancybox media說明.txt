@@ -1,0 +1,124 @@
+bxslider & fancybox media說明
+
+前置作業
+
+<步驟一>
+
+至CDNJS > copy網址修改版本<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<步驟二>
+
+至bxslider > Download檔案 > 解壓縮 >兩個檔案拉到主檔案裡，輸入至編輯器
+
+<link rel="stylesheet" href="jquery.bxslider.css">
+
+<script src="jquery.bxslider.min.js"></script>
+
+<步驟三>
+
+至fancybox >download > 解壓縮 > 建立新的資料夾命名為fancybox > 原fancybox的檔案裡source內容剪下貼上到新建立的fancybox檔案夾裡
+
+編輯器輸入
+
+<link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+<link rel="stylesheet" href="fancybox/helpers/jquery.fancybox-thumbs.css">
+ <script src="fancybox/jquery.fancybox.pack.js"></script>
+ <script src="fancybox/helpers/jquery.fancybox-media.js"></script>
+ <script src="fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+
+主題內容
+
+<步驟一>
+
+撰寫body
+
+<header>
+       <ul class="slider">
+           <li><img src="images/x1.jpg" alt="" title="aaa"></li>
+           <li><img src="images/x2.jpg" alt="" title="aaa"></li>
+           <li><img src="images/x3.jpg" alt="" title="aaa"></li>
+           <li><img src="images/x4.jpg" alt="" title="aaa"></li>
+       </ul>
+</header>
+
+<步驟二>
+
+撰寫css
+
+<style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
+        
+        .clearfix::after{
+            content:"";
+            display: block;
+            clear:both;
+        }
+        
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .slider{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width:1200px;
+            margin: auto;
+        }
+        h1{
+            float: left;
+            padding-left: 75px;
+            font-size: 50px;
+            font-family:"Montserrat";
+        }
+        p{
+         float: right;
+         padding-right: 75px;
+         font-size: 20px;
+         font-family: "Raleway";
+         margin-top: 65px;
+         color: darkgray
+        }
+ </style>
+
+<步驟三>
+
+撰寫script
+
+<script>
+        $(document).ready(function(){
+            $(".slider").bxSlider({
+               auto:true,
+               mode:"fade",
+               speed:5000,
+               pause:1000,
+               captions:true,
+            });
+        });
+ </script>
+
+註:
+
+fade:是淡入淡出
+
+caption是圖片底部標籤
+
+如果要修改圖片邊框至jquery.bxslider.css
+
+.bx-wrapper .bx-viewport {
+/*	-moz-box-shadow: 0 0 5px #ccc;*/
+/*	-webkit-box-shadow: 0 0 5px #ccc;*/
+/*	box-shadow: 0 0 5px #ccc;*/
+/*	border:  5px solid #fff;*/
+/*	left: -5px;*/
+/*	background: #fff;*/
+	
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}

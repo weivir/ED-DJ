@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.bxslider.css">
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="fancybox/helpers/jquery.fancybox-thumbs.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
+        .clearfix::after{
+            content:"";
+            display: block;
+            clear:both;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .slider{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width:1200px;
+            margin: auto;
+        }
+       .title h1{
+            float: left;
+            padding-left: 75px;
+            font-size: 50px;
+            font-family:"Montserrat";
+        }
+       .title p{
+         float: right;
+         padding-right: 75px;
+         font-size: 20px;
+         font-family: "Raleway";
+         margin-top: 65px;
+         color: darkgray
+        }
+         h1{
+            display: block;
+            text-align: center;
+            font-family: "Montserrat";
+        }
+        .container-A{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-B{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            margin: 10px;
+            float: left;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="jquery.bxslider.min.js"></script>
+    <script src="fancybox/jquery.fancybox.pack.js"></script>
+    <script src="fancybox/helpers/jquery.fancybox-media.js"></script>
+    <script src="fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".slider").bxSlider({
+               auto:true,
+               mode:"fade",
+               speed:5000,
+               pause:1000,
+               captions:true,
+            });
+            $(".fancy-media").fancybox({
+                openEffect:"elastic",
+                closeEffect:"elastic",
+                prevEffect:"fade",
+                openSpeed:400,
+                padding:0,
+                helpers:{
+                    media:{}
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+   <div class="title">
+   <h1>ED</h1>
+   <p>Share Music</p>
+   </div>
+   <header>
+       <ul class="slider">
+           <li><img src="images/x1.jpg" alt="" title="R3hab"></li>
+           <li><img src="images/x2.jpg" alt="" title="Dimitri Vegas & Like Mike"></li>
+           <li><img src="images/x3.jpg" alt="" title="W&W"></li>
+           <li><img src="images/x4.jpg" alt="" title="Yellow"></li>
+       </ul>
+   </header>
+    <h1>MUSIC IS LIFE</h1>
+   <div class="works-wrapper clearfix">
+   <div class="container-A">
+       <div class="box">
+           <a href="https://www.youtube.com/watch?v=j1DBHdxP16k" class="fancy-media" rel="music" title="Echo">
+           <img src="images/a1.jpg" alt="Echo"></a>
+       </div>
+        <div class="box">
+           <a href="https://www.youtube.com/watch?v=nlfatQ0XgoU" class="fancy-media" rel="music" title="Love & War">
+           <img src="images/a2.jpg" alt="Love & War"></a>
+       </div>
+        <div class="box">
+           <a href="https://www.youtube.com/watch?v=OckRBEojqho" class="fancy-media" rel="music" title="Everything">
+           <img src="images/a3.jpg" alt="Everything"></a>
+       </div>
+   </div>
+    <div class="container-B">
+       <div class="box">
+           <a href="https://www.youtube.com/watch?v=VUsApjOEchI" class="fancy-media" rel="music" title="Live The Night">
+           <img src="images/a4.jpg" alt="Live The Night "></a>
+       </div>
+         <div class="box">
+           <a href="https://www.youtube.com/watch?v=juk-DPtSY4M" class="fancy-media" rel="music" title="Arcade">
+           <img src="images/a5.jpg" alt="Arcade"></a>
+       </div>
+       <div class="box">
+           <a href="https://www.youtube.com/watch?v=exJlapzPnlc" class="fancy-media" rel="music" title="The Hum ">
+           <img src="images/a6.jpg" alt="The Hum "></a>
+       </div>
+    </div>
+</div> 
+</body>
+</html>
